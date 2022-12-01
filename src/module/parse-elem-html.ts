@@ -19,7 +19,7 @@ function parseHtml(
     link,
     fileName,
     children: [{ text: '' }], // void node 必须有一个空白 text
-  } as AttachmentElement
+  } as unknown as AttachmentElement
 }
 
 const parseHtmlConf = {

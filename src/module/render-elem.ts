@@ -14,35 +14,41 @@ function renderAttachment(elem: SlateElement, children: VNode[] | null, editor: 
   const selected = DomEditor.isNodeSelected(editor, elem)
 
   // 构建 vnode
-  const { fileName = '', link = '' } = elem as AttachmentElement
+  const { fileName = '', link = '' } = elem as unknown as AttachmentElement
   const vnode = h(
-    'span',
+    'div',
     {
       props: {
-        contentEditable: false, // 不可编辑
+        contentEditable: true, // 不可编辑
+        draggable: true,
       },
       style: {
-        display: 'inline-block', // inline
+        height: '300px',
+        display: 'block', // inline
         marginLeft: '3px',
         marginRight: '3px',
-        border:
-          selected && !isDisabled
-            ? '2px solid var(--w-e-textarea-selected-border-color)' // wangEditor 提供了 css var https://www.wangeditor.com/v5/theme.html
-            : '2px solid transparent',
+        border: '3px dashed orange',
+        textAlign: 'right',
+        // border:
+        //   selected && !isDisabled
+        //     ? '2px solid var(--w-e-textarea-selected-border-color)' // wangEditor 提供了 css var https://www.wangeditor.com/v5/theme.html
+        //     : '2px solid transparent',
         borderRadius: '3px',
+
         padding: '0 3px',
-        backgroundColor: '#f1f1f1',
+        // backgroundColor: '#f1f1f1',
+
         cursor: isDisabled ? 'pointer' : 'inherit',
       },
-      on: {
-        // disable 时，点击下载附件
-        click() {
-          if (!isDisabled) return
-          if (link) {
-            window.open(link, '_blank')
-          }
-        },
-      },
+      // on: {
+      //   // disable 时，点击下载附件
+      //   click() {
+      //     if (!isDisabled) return
+      //     if (link) {
+      //       window.open(link, '_blank')
+      //     }
+      //   },
+      // },
     },
     [
       h('img', {

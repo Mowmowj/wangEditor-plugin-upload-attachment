@@ -30,7 +30,7 @@ export function insertAttachment(editor: IDomEditor, fileName: string, link: str
     type: 'attachment',
     fileName,
     link,
-    children: [{ text: '' }],
+    children: [{ type: 'header1', children: [{ text: '1231233' }] }],
   }
   editor.insertNode(attachmentElem)
   editor.move(1)

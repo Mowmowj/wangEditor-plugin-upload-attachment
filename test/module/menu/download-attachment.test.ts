@@ -22,7 +22,7 @@ describe('download attachment menu', () => {
       type: 'attachment',
       fileName: 'aaa',
       link: 'bbb',
-      children: [{ text: '' }],
+      children: [{ type: 'header1', children: [{ text: '1231233' }] }],
     }
     return attachmentElem
   }

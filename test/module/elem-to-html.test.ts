@@ -13,7 +13,7 @@ describe('attachment elem-to-html', () => {
     type: 'attachment',
     fileName,
     link,
-    children: [{ text: '' }],
+    children: [{ type: 'header1', children: [{ text: '1231233' }] }],
   }
 
   it('type', () => {

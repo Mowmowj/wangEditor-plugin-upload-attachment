@@ -144,7 +144,7 @@ const editor = createEditor({
   //     children: [{ text: '选一个视频文件，作为附件上传：' }],
   //   },
   // ],
-  html: '<p>hello world<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="https://pan.baidu.com/" download="附件文件名">附件文件名</a></p><p> <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> </p><p>选一个视频文件，作为附件上传：</p>',
+  html: '<p>hello world<a data-w-e-type="attachment" data-w-e-is-void data-w-e-is-inline href="https://pan.baidu.com/" download="附件文件名"><h1>附件文件名</h1><h1>附件文件名</h1><h1>附件文件名</h1><h1>附件文件名</h1></a></p><p> <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> </p><p>选一个视频文件，作为附件上传：</p>',
 })
 const toolbar = createToolbar({
   editor,

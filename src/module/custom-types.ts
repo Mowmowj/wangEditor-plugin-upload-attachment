@@ -3,13 +3,18 @@
  * @author wangfupeng
  */
 
-type EmptyText = {
-  text: ''
+type PureText = {
+  text: string
+}
+type Element = {
+  type: 'header1'
+  children: PureText[]
 }
 
 export type AttachmentElement = {
   type: 'attachment'
   fileName: string
   link: string
-  children: EmptyText[]
+  children: Element[]
 }
+// { type: 'header1', children: [ { text: 'hello' } ] }

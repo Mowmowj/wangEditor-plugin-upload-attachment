@@ -15,7 +15,7 @@ describe('attachment render-elem', () => {
     type: 'attachment',
     fileName,
     link: 'x',
-    children: [{ text: '' }],
+    children: [{ type: 'header1', children: [{ text: '1231233' }] }],
   }
 
   it('type', () => {

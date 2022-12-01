@@ -13,7 +13,7 @@ describe('attachment plugin', () => {
     type: 'attachment',
     link: 'x',
     fileName: 'y',
-    children: [{ text: '' }],
+    children: [{ type: 'header1', children: [{ text: '1231233' }] }],
   }
 
   it('isInline', () => {

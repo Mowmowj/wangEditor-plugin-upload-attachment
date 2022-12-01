@@ -46,7 +46,7 @@ class DownloadAttachmentMenu implements IButtonMenu {
   private getSelectedElem(editor: IDomEditor): AttachmentElement | null {
     const node = DomEditor.getSelectedNodeByType(editor, 'attachment')
     if (node == null) return null
-    return node as AttachmentElement
+    return node as unknown as AttachmentElement
   }
 }
 
